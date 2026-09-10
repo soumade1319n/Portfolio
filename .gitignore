@@ -1,0 +1,25 @@
+# Ignore common OS and editor files
+.DS_Store
+Thumbs.db
+
+# Node modules (if you ever add Node tooling)
+node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Build outputs
+dist/
+build/
+
+# Images
+*.jpg
+*.jpeg

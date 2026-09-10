@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumadeep Nayak — Full-Stack Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Soumadeep Nayak — Full-Stack Software Engineer specializing in Next.js 16, TypeScript, Real-Time Distributed Systems, and ML Pipelines." />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Interactive Particles & Aurora Layer -->
+  <div class="bg-ambient-wrapper">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-grid-layer"></div>
+  </div>
+
+  <!-- Centered Floating Navbar -->
+  <div class="header-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand">
+        <img src="profile.jpg" alt="Soumadeep Nayak Headshot" class="brand-photo-small" />
+        <span>Soumadeep<span class="text-accent">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services" class="nav-item">Services</a></li>
+        <li><a href="#projects" class="nav-item">Work</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#certifications" class="nav-item">Certificates</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Accent Switcher -->
+        <div class="theme-picker" title="Switch Theme Accent">
+          <button class="theme-dot dot-blue active" data-color="default" aria-label="Blue theme"></button>
+          <button class="theme-dot dot-cyan" data-color="cyan" aria-label="Cyan theme"></button>
+          <button class="theme-dot dot-purple" data-color="purple" aria-label="Purple theme"></button>
+          <button class="theme-dot dot-emerald" data-color="emerald" aria-label="Emerald theme"></button>
+          <button class="theme-dot dot-amber" data-color="amber" aria-label="Amber theme"></button>
+        </div>
+
+        <button class="btn btn-primary btn-sm open-resume-trigger" id="open-resume-btn"
+          title="View & Download PDF Resume">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Resume (PDF)</span>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid-wrapper">
+        <div class="hero-main-col">
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span>Available for SDE Roles, Data Analytics & Internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering High-Throughput <span class="gradient-text">Web Platforms</span> & Real-Time Systems.
+          </h1>
+
+          <div class="hero-subtitle">
+            <span>Specializing in </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-desc">
+            Computer Science undergraduate at <strong>Presidency University</strong> (Class of 2027). I build fast,
+            secure full-stack applications with <strong>Next.js 16, TypeScript, WebSockets</strong>, and
+            high-performance ML inference microservices.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Selected Work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button class="btn btn-secondary open-resume-trigger" id="download-resume-hero-btn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download Resume (PDF)</span>
+            </button>
+            <button class="btn btn-secondary" id="copy-email-hero-btn">
+              <i class="fa-regular fa-copy"></i>
+              <span id="hero-email-text">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Repository Links Bar -->
+          <div class="hero-repo-pills"
+            style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <span
+              style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              <i class="fa-brands fa-github" style="color: var(--accent-light);"></i> Featured Repos:
+            </span>
+            <a href="https://github.com/soumade1319n/MediMind" target="_blank" rel="noopener noreferrer"
+              class="repo-pill-btn">
+              <i class="fa-solid fa-heart-pulse" style="color: #ec4899;"></i> <strong>MediMind</strong> ↗
+            </a>
+            <a href="https://github.com/soumade1319n/MedSense-" target="_blank" rel="noopener noreferrer"
+              class="repo-pill-btn">
+              <i class="fa-solid fa-brain" style="color: #a855f7;"></i> <strong>MedSense</strong> ↗
+            </a>
+            <a href="https://github.com/soumade1319n/ERCS/tree/main/emergency-response" target="_blank"
+              rel="noopener noreferrer" class="repo-pill-btn">
+              <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i> <strong>ERCS</strong> ↗
+            </a>
+          </div>
+
+          <div class="hero-social-row" style="margin-top: 16px;">
+            <a href="https://github.com/soumade1319n" target="_blank" rel="noopener noreferrer" class="social-icon-box"
+              title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/soumadeepnayak" target="_blank" rel="noopener noreferrer"
+              class="social-icon-box" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:soumadeepnayak@gmail.com" class="social-icon-box" title="Email Me">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <span style="font-size: 0.82rem; color: var(--text-muted); margin-left: 6px;">
+              <i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka, India
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Right: High-Impact Portrait Showcase Card -->
+        <div class="hero-card-col">
+          <div class="hero-portrait-card">
+            <div class="hero-portrait-img-wrap">
+              <img src="profile.jpg" alt="Soumadeep Nayak — Full-Stack Engineer" class="hero-portrait-img" />
+
+              <!-- Floating Top-Right Status Badge -->
+              <div class="portrait-status-badge">
+                <span class="pulse-dot"></span>
+                <span>OPEN_TO_WORK: SDE '27</span>
+              </div>
+
+              <!-- Floating Bottom Info Bar -->
+              <div class="portrait-bottom-info">
+                <div class="portrait-name-tag">
+                  <h4>Soumadeep Nayak <i class="fa-solid fa-circle-check" style="color: #eab308; font-size: 0.85rem;"
+                      title="Verified Profile"></i></h4>
+                  <span>Full-Stack Engineer</span>
+                </div>
+                <div class="portrait-ping-tag">&lt;24ms ping</div>
+              </div>
+            </div>
+
+            <!-- 2x2 Highlights Grid Under Photo -->
+            <div class="portrait-highlights-grid">
+              <div class="portrait-highlight-item">
+                <span class="p-lbl">SPECIALIZATION</span>
+                <span class="p-val">Next.js 16 &amp; TypeScript</span>
+              </div>
+              <div class="portrait-highlight-item">
+                <span class="p-lbl">DISTRIBUTED APIS</span>
+                <span class="p-val">FastAPI &amp; WebSockets</span>
+              </div>
+              <div class="portrait-highlight-item">
+                <span class="p-lbl">CERTIFICATIONS</span>
+                <span class="p-val">6+ HackerRank Top %</span>
+              </div>
+              <div class="portrait-highlight-item">
+                <span class="p-lbl">EDUCATION</span>
+                <span class="p-val">Presidency Univ '27</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Marquee Ribbon -->
+    <div class="tech-ribbon">
+      <div class="ribbon-track">
+        <span class="ribbon-item"><i class="fa-brands fa-react"></i> React.js</span>
+        <span class="ribbon-item"><i class="fa-brands fa-js"></i> TypeScript</span>
+        <span class="ribbon-item"><i class="fa-solid fa-layer-group"></i> Next.js 16</span>
+        <span class="ribbon-item"><i class="fa-brands fa-node-js"></i> Node.js</span>
+        <span class="ribbon-item"><i class="fa-solid fa-database"></i> PostgreSQL & MySQL</span>
+        <span class="ribbon-item"><i class="fa-solid fa-fire"></i> Firebase Firestore</span>
+        <span class="ribbon-item"><i class="fa-solid fa-bolt"></i> Real-Time WebSockets</span>
+        <span class="ribbon-item"><i class="fa-brands fa-python"></i> Python & FastAPI</span>
+        <span class="ribbon-item"><i class="fa-solid fa-shield-halved"></i> RBAC & JWT Auth</span>
+        <!-- Duplicated for continuous loop -->
+        <span class="ribbon-item"><i class="fa-brands fa-react"></i> React.js</span>
+        <span class="ribbon-item"><i class="fa-brands fa-js"></i> TypeScript</span>
+        <span class="ribbon-item"><i class="fa-solid fa-layer-group"></i> Next.js 16</span>
+        <span class="ribbon-item"><i class="fa-brands fa-node-js"></i> Node.js</span>
+        <span class="ribbon-item"><i class="fa-solid fa-database"></i> PostgreSQL & MySQL</span>
+        <span class="ribbon-item"><i class="fa-solid fa-fire"></i> Firebase Firestore</span>
+        <span class="ribbon-item"><i class="fa-solid fa-bolt"></i> Real-Time WebSockets</span>
+        <span class="ribbon-item"><i class="fa-brands fa-python"></i> Python & FastAPI</span>
+        <span class="ribbon-item"><i class="fa-solid fa-shield-halved"></i> RBAC & JWT Auth</span>
+      </div>
+    </div>
+
+    <!-- Services & Core Competencies -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CORE COMPETENCIES</span>
+          <h2 class="section-title">What I Bring to the Table</h2>
+          <p class="section-subtitle">Full-lifecycle software engineering from architecture design to production
+            deployment.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-desktop"></i></div>
+            <h3>Full-Stack Web Engineering</h3>
+            <p>Building responsive, accessible web applications with Next.js App Router, Server Actions, React, and
+              type-safe TypeScript architectures.</p>
+            <div class="service-tags">
+              <span class="service-tag">Next.js 16</span>
+              <span class="service-tag">React</span>
+              <span class="service-tag">TypeScript</span>
+              <span class="service-tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-server"></i></div>
+            <h3>Distributed APIs & WebSockets</h3>
+            <p>Architecting low-latency microservices with Node/Express and Python FastAPI, handling real-time
+              bi-directional streaming feeds.</p>
+            <div class="service-tags">
+              <span class="service-tag">WebSockets</span>
+              <span class="service-tag">FastAPI</span>
+              <span class="service-tag">Node.js</span>
+              <span class="service-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-database"></i></div>
+            <h3>Data Architecture & Security</h3>
+            <p>Engineering relational schemas (PostgreSQL, MySQL) and NoSQL stores (Firestore, MongoDB) with strict
+              RBAC, JWT, and TOTP authentication.</p>
+            <div class="service-tags">
+              <span class="service-tag">PostgreSQL</span>
+              <span class="service-tag">MongoDB</span>
+              <span class="service-tag">Firestore</span>
+              <span class="service-tag">RBAC</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI & ML Inference Pipelines</h3>
+            <p>Integrating fine-tuned deep learning models (HuggingFace Transformers, DistilBERT) served through
+              high-throughput async endpoints.</p>
+            <div class="service-tags">
+              <span class="service-tag">PyTorch</span>
+              <span class="service-tag">DistilBERT</span>
+              <span class="service-tag">HuggingFace</span>
+              <span class="service-tag">Recharts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Works / Case Studies (MediMind & MedSense Featured Prominently) -->
+    <section class="section" id="projects"
+      style="background: rgba(15,19,26,0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SELECTED CASE STUDIES</span>
+          <h2 class="section-title">Production Systems & Featured Repositories</h2>
+          <p class="section-subtitle">Real-world applications engineered for performance, data security, and high
+            reliability.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="works-filter-bar">
+          <button class="works-tab-btn active filter-btn" data-filter="all">All Projects</button>
+          <button class="works-tab-btn filter-btn" data-filter="fullstack">Full-Stack & Health</button>
+          <button class="works-tab-btn filter-btn" data-filter="realtime">Real-Time Systems</button>
+        </div>
+
+        <div class="projects-stack">
+          <!-- Project 1: MediMind -->
+          <article class="project-case-card project-card" data-category="fullstack">
+            <div class="project-meta-row">
+              <span class="project-tag-badge"
+                style="background: rgba(236, 72, 153, 0.12); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">Clinical
+                Health Portal</span>
+              <span
+                style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-light); font-weight: 600;">
+                <i class="fa-solid fa-star" style="color: #fbbf24;"></i> Featured Repository
+              </span>
+            </div>
+
+            <h3 class="project-title">MediMind — Healthcare & Prescription Management Dashboard</h3>
+
+            <p class="project-description">
+              A secure clinical healthcare portal designed for managing complex prescription intervals, atomic dosage
+              updates, and asynchronous medical lab report archiving with server-side validation.
+            </p>
+
+            <div class="project-stack-pills">
+              <span>Next.js 16 (App Router)</span>
+              <span>TypeScript</span>
+              <span>Firebase Admin SDK</span>
+              <span>Firestore</span>
+              <span>Server Actions</span>
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="project-highlights-box">
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Hardened HttpOnly cookie-based JWT sessions via Firebase Admin SDK</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Atomic Next.js 16 Server Actions for dosage modifications without client key exposure</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Asynchronous storage pipeline for structured medical report indexing</span>
+              </div>
+            </div>
+
+            <div class="project-actions-footer">
+              <a href="https://github.com/soumade1319n/MediMind" target="_blank" rel="noopener noreferrer"
+                class="btn btn-github btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>View GitHub Repository ↗</span>
+              </a>
+              <button class="btn btn-secondary btn-sm preview-btn" data-project="medimind">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: MedSense -->
+          <article class="project-case-card project-card" data-category="fullstack">
+            <div class="project-meta-row">
+              <span class="project-tag-badge"
+                style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">NLP
+                & Triage Intelligence</span>
+              <span
+                style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-light); font-weight: 600;">
+                <i class="fa-solid fa-star" style="color: #fbbf24;"></i> Featured Repository
+              </span>
+            </div>
+
+            <h3 class="project-title">MedSense — Symptom-to-Condition Triage Platform</h3>
+
+            <p class="project-description">
+              An educational NLP symptom-to-condition triage assistant powered by fine-tuned DistilBERT inference,
+              Node/Express proxy middleware, and a real-time analytics dashboard.
+            </p>
+
+            <div class="project-stack-pills">
+              <span>FastAPI</span>
+              <span>PyTorch / DistilBERT</span>
+              <span>Node.js / Express</span>
+              <span>MongoDB</span>
+              <span>React + Recharts</span>
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="project-highlights-box">
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>DistilBERT deep learning inference served via asynchronous FastAPI endpoints</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Node/Express backend with MongoDB query logging & analytics caching</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Interactive triage assessment with real-time condition analytics</span>
+              </div>
+            </div>
+
+            <div class="project-actions-footer">
+              <a href="https://github.com/soumade1319n/MedSense-" target="_blank" rel="noopener noreferrer"
+                class="btn btn-github btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>View GitHub Repository ↗</span>
+              </a>
+              <button class="btn btn-secondary btn-sm preview-btn" data-project="medsense">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: ERCS -->
+          <article class="project-case-card project-card" data-category="fullstack realtime">
+            <div class="project-meta-row">
+              <span class="project-tag-badge">Real-Time Crisis Ops</span>
+              <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);"><i
+                  class="fa-solid fa-star" style="color: #fbbf24;"></i> Flagship System</span>
+            </div>
+
+            <h3 class="project-title">ERCS — Emergency Response Coordination System</h3>
+
+            <p class="project-description">
+              A high-reliability disaster response platform enabling emergency coordinators to monitor incident feeds,
+              deploy field volunteers, and broadcast live alerts with sub-second latency.
+            </p>
+
+            <div class="project-stack-pills">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Firebase</span>
+              <span>Leaflet Maps</span>
+              <span>WebSockets</span>
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="project-highlights-box">
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Sub-second live responder dispatch coordinates via WebSockets</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>Dual-Role (Coordinator / Volunteer) RBAC with OTP/TOTP MFA</span>
+              </div>
+              <div class="highlight-row">
+                <i class="fa-solid fa-check"></i>
+                <span>One-click instantaneous SOS incident broadcasting feed</span>
+              </div>
+            </div>
+
+            <div class="project-actions-footer">
+              <a href="https://github.com/soumade1319n/ERCS/tree/main/emergency-response" target="_blank"
+                rel="noopener noreferrer" class="btn btn-github btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>View GitHub Repository ↗</span>
+              </a>
+              <button class="btn btn-secondary btn-sm preview-btn" data-project="ercs">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Bento Grid) -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ENGINEERING PROFILE</span>
+          <h2 class="section-title">Background & Core Foundation</h2>
+          <p class="section-subtitle">Bridging user-centric interfaces with resilient backend infrastructure.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Story -->
+          <div class="bento-card bento-span-2">
+            <div class="service-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Full-Stack &amp; Systems Focus</h3>
+            <p>
+              I am a Computer Science undergraduate at <strong>Presidency University, Bengaluru</strong>. My engineering
+              focus is centered on complete end-to-end architectures—from low-latency WebSocket communication layers and
+              microservice routing to type-safe frontend state management with TypeScript and Next.js.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+              <span class="service-tag">⚡ Real-Time Streaming</span>
+              <span class="service-tag">🔒 Multi-Tier RBAC</span>
+              <span class="service-tag">🌐 100% Type-Safe TypeScript</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Education -->
+          <div class="bento-card">
+            <div class="service-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Education</h3>
+            <h4 class="edu-degree">B.Tech in Computer Science & Engineering</h4>
+            <p class="edu-school">Presidency University, Bengaluru</p>
+            <span class="edu-year">2023 — 2027</span>
+            <ul class="edu-courses">
+              <li>Data Structures & Algorithms</li>
+              <li>Database Management Systems (DBMS)</li>
+              <li>Operating Systems & Networks</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Security & Auth -->
+          <div class="bento-card">
+            <div class="service-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Defense in Depth</h3>
+            <p>
+              Every system is engineered with security first: HttpOnly cookie session management, server-side data
+              validation schemas, role-based route guards, and zero credential exposure.
+            </p>
+          </div>
+
+          <!-- Card 4: Quantitative Stats -->
+          <div class="bento-card bento-span-2 stats-bento-card">
+            <div class="stat-metric-box">
+              <div class="stat-big-num">6+</div>
+              <div class="stat-desc-lbl">HackerRank Certifications</div>
+            </div>
+            <div class="stat-divider-line"></div>
+            <div class="stat-metric-box">
+              <div class="stat-big-num">100%</div>
+              <div class="stat-desc-lbl">TypeScript & Type Safety</div>
+            </div>
+            <div class="stat-divider-line"></div>
+            <div class="stat-metric-box">
+              <div class="stat-big-num">&lt;500ms</div>
+              <div class="stat-desc-lbl">Live Geospatial Sync Target</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications"
+      style="background: rgba(15,19,26,0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">VERIFIED CREDENTIALS</span>
+          <h2 class="section-title">Certifications & Accolades</h2>
+          <p class="section-subtitle">Standardized problem solving, database proficiency, and frontend development
+            credentials.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- HackerRank SQL Advanced -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-brands fa-hackerrank"></i></div>
+            <div>
+              <span class="cert-issuer">HackerRank • Top Percentile</span>
+              <h3 class="cert-name">SQL (Advanced)</h3>
+              <p class="cert-desc">Complex queries, recursive CTEs, indexing performance, window functions, and schema
+                optimization.</p>
+            </div>
+          </div>
+
+          <!-- HackerRank Software Engineer -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-brands fa-hackerrank"></i></div>
+            <div>
+              <span class="cert-issuer">HackerRank • Certified</span>
+              <h3 class="cert-name">Software Engineer Role</h3>
+              <p class="cert-desc">Core problem solving, algorithms, data structures, and production-level code design.
+              </p>
+            </div>
+          </div>
+
+          <!-- HackerRank Frontend React -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-brands fa-react"></i></div>
+            <div>
+              <span class="cert-issuer">HackerRank • Certified</span>
+              <h3 class="cert-name">Frontend Developer (React)</h3>
+              <p class="cert-desc">Component lifecycle, hooks state management, virtual DOM rendering, and API
+                integration.</p>
+            </div>
+          </div>
+
+          <!-- HackerRank JavaScript & SQL Intermediate -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
+            <div>
+              <span class="cert-issuer">HackerRank • Certified</span>
+              <h3 class="cert-name">JavaScript & SQL (Intermediate)</h3>
+              <p class="cert-desc">Asynchronous programming, closures, event loop, prototypes, and relational joins.</p>
+            </div>
+          </div>
+
+          <!-- IBM Python for Data Science -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+            <div>
+              <span class="cert-issuer">IBM / Cognitive Class</span>
+              <h3 class="cert-name">Python 101 for Data Science</h3>
+              <p class="cert-desc">Data structures, logic, functions, Pandas, NumPy, and data manipulation fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <!-- IBM Data Visualization -->
+          <div class="cert-item-card">
+            <div class="cert-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div>
+              <span class="cert-issuer">IBM / Cognitive Class</span>
+              <h3 class="cert-name">Data Visualization with Python</h3>
+              <p class="cert-desc">Generating exploratory and analytical visualizations using Matplotlib, Seaborn, and
+                Folium.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info-col">
+            <span class="section-tag">DIRECT INQUIRIES</span>
+            <h2 class="section-title">Let's Build Something Remarkable</h2>
+            <p style="font-size: 0.96rem; line-height: 1.65;">
+              I am actively seeking <strong>Software Engineering roles, internships, and collaborative
+                opportunities</strong>. Whether you have an engineering problem to solve, a project proposal, or a role
+              discussion, feel free to reach out.
+            </p>
+
+            <div class="contact-channel-list">
+              <div class="contact-channel-card">
+                <div class="channel-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="channel-lbl">Email Address</div>
+                  <a href="mailto:soumadeepnayak@gmail.com" class="channel-val">soumadeepnayak@gmail.com</a>
+                </div>
+                <button class="copy-icon-btn" id="copy-email-contact-btn" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div class="channel-lbl">Phone</div>
+                  <a href="tel:+918050616468" class="channel-val">+91 8050616468</a>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div class="channel-lbl">Location</div>
+                  <div class="channel-val">Bengaluru, Karnataka, India</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+              <a href="https://linkedin.com/in/soumadeepnayak" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://github.com/soumade1319n" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <button class="btn btn-primary btn-sm open-resume-trigger">
+                <i class="fa-solid fa-download"></i> Get Resume (PDF)
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form Box -->
+          <div class="contact-form-box">
+            <h3>Send a Direct Message</h3>
+
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/soumadeepnayak@gmail.com"
+              method="POST">
+              <!-- FormSubmit Anti-Spam & Template Config -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="[Portfolio Contact] New Inquiry for Soumadeep" />
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g. Jordan Lee" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="jordan@company.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required
+                  placeholder="Software Engineer Role / Project" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required
+                  placeholder="Hi Soumadeep, I came across your portfolio and would like to discuss..."></textarea>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="submit" class="btn btn-primary" id="send-btn" style="flex: 1;">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" id="direct-gmail-btn" title="Compose in Gmail Web"
+                  style="flex: 1;">
+                  <i class="fa-brands fa-google" style="color: #ea4335;"></i>
+                  <span>Open in Gmail</span>
+                </button>
+              </div>
+
+              <div class="form-status" id="form-status" style="font-size: 0.85rem; margin-top: 8px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Soumadeep Nayak. Engineered with modern HTML5, CSS3 & JavaScript.</p>
+      <a href="#hero" class="back-to-top" title="Back to Top">
+        <span>Back to Top</span>
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Resume Modal with Instant PDF Generation & Photo -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-file-pdf" style="color: #ef4444;"></i>
+          <span>Soumadeep Nayak — Official Resume</span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary btn-sm" id="print-resume-btn" title="Download or Save as PDF">
+            <i class="fa-solid fa-download"></i> 📥 Download / Save PDF
+          </button>
+          <button class="modal-close-btn" id="close-resume-btn">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body" id="printable-resume">
+        <div class="resume-paper">
+          <header class="resume-header"
+            style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+            <div>
+              <h1 style="margin: 0; font-size: 1.8rem; font-weight: 800; color: #0f172a; letter-spacing: -0.02em;">
+                SOUMADEEP NAYAK</h1>
+              <div class="resume-tagline"
+                style="font-size: 1rem; font-weight: 600; color: #2563eb; margin: 4px 0 8px 0;">Full-Stack Software
+                Engineer</div>
+              <div class="resume-meta" style="font-size: 0.85rem; color: #475569;">
+                <span>Bengaluru, Karnataka, India</span> •
+                <span>+91 8050616468</span> •
+                <span>soumadeepnayak@gmail.com</span>
+              </div>
+              <div class="resume-links" style="font-size: 0.85rem; margin-top: 4px;">
+                <a href="https://linkedin.com/in/soumadeepnayak" target="_blank"
+                  style="color: #2563eb; text-decoration: none;">linkedin.com/in/soumadeepnayak</a> •
+                <a href="https://github.com/soumade1319n" target="_blank"
+                  style="color: #2563eb; text-decoration: none;">github.com/soumade1319n</a>
+              </div>
+            </div>
+            <img src="profile.jpg" alt="Soumadeep Nayak Profile Photo" class="resume-photo-thumb" />
+          </header>
+
+          <hr class="resume-divider" style="margin: 16px 0; border: none; border-top: 2px solid #e2e8f0;" />
+
+          <section class="resume-section">
+            <h2 class="resume-sec-title">PROFESSIONAL SUMMARY</h2>
+            <p>
+              Computer Science undergraduate (Class of 2027) with practical experience engineering scalable full-stack
+              web applications. Proficient in TypeScript, React, Next.js, Node.js, and SQL/NoSQL database management.
+              Demonstrated ability in architecting secure authentication systems (OTP/TOTP, JWT), real-time WebSocket
+              state synchronizations, and high-performance user interfaces.
+            </p>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-sec-title">TECHNICAL SKILLS</h2>
+            <div class="resume-skill-line"><strong>Languages:</strong> TypeScript, JavaScript, Python, Java, SQL
+              (PostgreSQL, MySQL)</div>
+            <div class="resume-skill-line"><strong>Frontend:</strong> Next.js (App Router, Server Actions), React.js,
+              Tailwind CSS, Framer Motion, HTML5, CSS3</div>
+            <div class="resume-skill-line"><strong>Backend & APIs:</strong> Node.js, Express.js, FastAPI, RESTful API
+              Design, WebSockets, Firebase Admin SDK</div>
+            <div class="resume-skill-line"><strong>Databases & ML:</strong> MongoDB, MySQL, Firebase Firestore, PyTorch,
+              HuggingFace Transformers</div>
+            <div class="resume-skill-line"><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Agile/Scrum</div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-sec-title">FEATURED PROJECTS</h2>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <strong>MediMind — Healthcare & Prescription Management Dashboard</strong>
+                <span>GitHub: github.com/soumade1319n/MediMind</span>
+              </div>
+              <div class="resume-tech">Next.js 16 (App Router) · TypeScript · React · Firebase Auth & Firestore ·
+                Tailwind CSS</div>
+              <ul class="resume-bullets">
+                <li>Architected an end-to-end medical dashboard for tracking prescriptions, dosage intervals, and
+                  medication schedules with Firestore and Server Actions.</li>
+                <li>Hardened authentication security using Firebase Admin SDK with HttpOnly cookie-based JWT sessions.
+                </li>
+                <li>Designed an asynchronous document-upload pipeline with cloud storage indexing for historical lab
+                  reports.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <strong>MedSense — Symptom-to-Condition Triage Platform</strong>
+                <span>GitHub: github.com/soumade1319n/MedSense-</span>
+              </div>
+              <div class="resume-tech">FastAPI · PyTorch / DistilBERT · Node.js · Express · MongoDB · React · Recharts
+              </div>
+              <ul class="resume-bullets">
+                <li>Built an NLP triage assistant fine-tuning DistilBERT on Symptom2Disease dataset served via FastAPI
+                  inference endpoint.</li>
+                <li>Implemented a Node.js/Express proxy with MongoDB logging and query analytics aggregation.</li>
+                <li>Developed a responsive React + Tailwind frontend with real-time condition analytics and confidence
+                  metrics.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <strong>ERCS — Emergency Response Coordination System</strong>
+                <span>GitHub: github.com/soumade1319n/ERCS</span>
+              </div>
+              <div class="resume-tech">Next.js · TypeScript · Firebase · Leaflet / Maps API · WebSockets · Tailwind CSS
+              </div>
+              <ul class="resume-bullets">
+                <li>Engineered a real-time incident-management platform connecting emergency coordinators with field
+                  volunteers to streamline disaster response.</li>
+                <li>Implemented Dual-Role Role-Based Access Control (RBAC) with OTP/TOTP multi-factor authentication.
+                </li>
+                <li>Integrated Leaflet and Google Maps geospatial APIs with bi-directional WebSockets for live dispatch
+                  positioning.</li>
+                <li>Developed an instantaneous one-click SOS alerting mechanism alongside a persistent live incident
+                  feed.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-sec-title">CERTIFICATIONS</h2>
+            <div class="resume-skill-line">• <strong>HackerRank:</strong> SQL (Advanced), Software Engineer, Frontend
+              Developer (React), JavaScript (Intermediate)</div>
+            <div class="resume-skill-line">• <strong>IBM / Cognitive Class:</strong> Python for Data Science (Python
+              101), Data Visualization with Python</div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-sec-title">EDUCATION</h2>
+            <div class="resume-item-header">
+              <strong>Presidency University, Bengaluru</strong>
+              <span>2023 – 2027</span>
+            </div>
+            <div>B.Tech in Computer Science & Engineering</div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Project Details Modal -->
+  <div class="modal-overlay" id="project-detail-modal">
+    <div class="modal-container modal-container-sm">
+      <div class="modal-header">
+        <div class="modal-title" id="detail-modal-title">Project Architecture</div>
+        <button class="modal-close-btn" id="close-detail-btn">&times;</button>
+      </div>
+      <div class="modal-body" id="detail-modal-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
