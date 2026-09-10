@@ -20,6 +20,4 @@ __pycache__/
 dist/
 build/
 
-# Images
-*.jpg
-*.jpeg
+# (Allow images like profile.jpg to be committed)
